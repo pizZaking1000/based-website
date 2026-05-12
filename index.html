@@ -176,10 +176,10 @@
   </div>
 
   <!-- Daily Inspirational Quote -->
-  <div class="section" id="quote-section">
-    <div class="section-title">Daily Inspirational Quote</div>
-    <div id="quote-text" style="font-size:15px; color:var(--text); line-height:1.7;"></div>
-    <div id="quote-author" style="font-size:12px; color:var(--muted); margin-top:10px;"></div>
+  <div class="section" id="quote-section" style="background:#2a2200; border-color:#f0c030;">
+    <div class="section-title" style="color:#f0c030;">Daily Inspirational Quote</div>
+    <div id="quote-text" style="font-size:15px; color:#ffe87a; line-height:1.7;"></div>
+    <div id="quote-author" style="font-size:12px; color:#b89a30; margin-top:10px;"></div>
   </div>
 
   <!-- About Me -->
@@ -192,72 +192,90 @@
     </div>
   </div>
 
-  <!-- Gaming -->
-  <div class="section">
-    <div class="section-title">Gaming</div>
-    <div class="links">
-
-      <div class="link-btn" style="cursor:default;">
-        <span class="link-icon">🎮</span>
-        <span class="link-label">PlayStation — super_pizZaking</span>
-      </div>
-
-      <a class="link-btn" href="https://steamcommunity.com/profiles/76561198287774932" target="_blank">
-        <span class="link-icon">🖥️</span>
-        <span class="link-label">Steam</span>
-        <span class="link-arrow">↗</span>
-      </a>
-
-      <div class="link-btn" style="cursor:default;">
-        <span class="link-icon">🟢</span>
-        <span class="link-label">Xbox — NoHaxJustMat600</span>
-      </div>
-
-      <div class="link-btn" style="cursor:default;">
-        <span class="link-icon">🕹️</span>
-        <span class="link-label">Nintendo — SW-2021-8815-3236</span>
-      </div>
-
+  <!-- Connections (collapsible Gaming + Socials) -->
+  <div class="section" style="padding:0; overflow:hidden;">
+    <div class="accordion-header" onclick="toggleAccordion('connections')" style="padding:20px 24px; cursor:pointer; display:flex; align-items:center; justify-content:space-between; user-select:none;">
+      <span style="font-family:var(--font-head); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted);">Connections</span>
+      <span id="connections-arrow" style="color:var(--muted); font-size:14px; transition:transform .3s;">▼</span>
     </div>
-  </div>
+    <div id="connections-body" style="display:none; padding:0 24px 20px; display:none;">
 
-  <!-- Socials -->
-  <div class="section">
-    <div class="section-title">Socials</div>
-    <div class="links">
-
-      <div class="link-btn" style="cursor:default;">
-        <span class="link-icon">💬</span>
-        <span class="link-label">Signal — pizZaking.54</span>
+      <!-- Gaming sub-accordion -->
+      <div style="border:1px solid var(--border); border-radius:var(--radius); margin-bottom:10px; overflow:hidden;">
+        <div class="accordion-header" onclick="toggleAccordion('gaming')" style="padding:14px 18px; cursor:pointer; display:flex; align-items:center; justify-content:space-between; user-select:none; background:var(--bg);">
+          <span style="font-family:var(--font-head); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted);">🎮 Gaming</span>
+          <span id="gaming-arrow" style="color:var(--muted); font-size:12px; transition:transform .3s;">▼</span>
+        </div>
+        <div id="gaming-body" style="display:none; padding:10px 14px 14px; display:none;">
+          <div class="links">
+            <div class="link-btn" style="cursor:default;">
+              <span class="link-icon">🎮</span>
+              <span class="link-label">PlayStation — super_pizZaking</span>
+            </div>
+            <a class="link-btn" href="https://steamcommunity.com/profiles/76561198287774932" target="_blank">
+              <span class="link-icon">🖥️</span>
+              <span class="link-label">Steam</span>
+              <span class="link-arrow">↗</span>
+            </a>
+            <div class="link-btn" style="cursor:default;">
+              <span class="link-icon">🟢</span>
+              <span class="link-label">Xbox — NoHaxJustMat600</span>
+            </div>
+            <div class="link-btn" style="cursor:default;">
+              <span class="link-icon">🕹️</span>
+              <span class="link-label">Nintendo — SW-2021-8815-3236</span>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="link-btn" style="cursor:default;">
-        <span class="link-icon">🎮</span>
-        <span class="link-label">Discord — __pizza_time__</span>
+      <!-- Socials sub-accordion -->
+      <div style="border:1px solid var(--border); border-radius:var(--radius); overflow:hidden;">
+        <div class="accordion-header" onclick="toggleAccordion('socials')" style="padding:14px 18px; cursor:pointer; display:flex; align-items:center; justify-content:space-between; user-select:none; background:var(--bg);">
+          <span style="font-family:var(--font-head); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted);">💬 Socials</span>
+          <span id="socials-arrow" style="color:var(--muted); font-size:12px; transition:transform .3s;">▼</span>
+        </div>
+        <div id="socials-body" style="display:none; padding:10px 14px 14px; display:none;">
+          <div class="links">
+            <div class="link-btn" style="cursor:default;">
+              <span class="link-icon">💬</span>
+              <span class="link-label">Signal — pizZaking.54</span>
+            </div>
+            <div class="link-btn" style="cursor:default;">
+              <span class="link-icon">🎮</span>
+              <span class="link-label">Discord — __pizza_time__</span>
+            </div>
+          </div>
+        </div>
       </div>
 
     </div>
   </div>
 
   <footer>
-    <p>Made with ♥ur mom♥ · Hosted free on GitHub Pages</p>
+    <p>Made with ♥ur mom♥ · Hosted on GitHub</p>
   </footer>
 
   <script>
+    // Accordion
+    function toggleAccordion(id) {
+      const body = document.getElementById(id + '-body');
+      const arrow = document.getElementById(id + '-arrow');
+      const isOpen = body.style.display === 'block';
+      body.style.display = isOpen ? 'none' : 'block';
+      arrow.style.transform = isOpen ? '' : 'rotate(180deg)';
+    }
+
+    // Quotes
     const quotes = [
       { text: "The only way to do great work is to love what you do.", author: "Steve Jobs" },
       { text: "In the middle of every difficulty lies opportunity.", author: "Albert Einstein" },
       { text: "It does not matter how slowly you go as long as you do not stop.", author: "Confucius" },
-      { text: "Life is what happens when you're busy making other plans.", author: "John Lennon" },
-      { text: "The future belongs to those who believe in the beauty of their dreams.", author: "Eleanor Roosevelt" },
       { text: "It is during our darkest moments that we must focus to see the light.", author: "Aristotle" },
-      { text: "Spread love everywhere you go. Let no one ever come to you without leaving happier.", author: "Mother Teresa" },
       { text: "When you reach the end of your rope, tie a knot in it and hang on.", author: "Franklin D. Roosevelt" },
-      { text: "Always remember that you are absolutely unique. Just like everyone else.", author: "Margaret Mead" },
       { text: "Do not go where the path may lead, go instead where there is no path and leave a trail.", author: "Ralph Waldo Emerson" },
       { text: "You will face many defeats in life, but never let yourself be defeated.", author: "Maya Angelou" },
       { text: "The greatest glory in living lies not in never falling, but in rising every time we fall.", author: "Nelson Mandela" },
-      { text: "In the end, it's not the years in your life that count. It's the life in your years.", author: "Abraham Lincoln" },
       { text: "Never let the fear of striking out keep you from playing the game.", author: "Babe Ruth" },
       { text: "Life is either a daring adventure or nothing at all.", author: "Helen Keller" },
       { text: "Don't go to the gym when you are motivated, go to the gym to get motivated and stay motivated.", author: "Unknown" },
@@ -268,6 +286,16 @@
       { text: "Success is not garenteed but excitement is.", author: "Unknown" },
       { text: "The world is better because u are in it.", author: "Unknown" },
       { text: "Flowers bloom.", author: "Unknown" },
+      { text: "Whether you spend today laughing or crying tomorrow will arrive just the same, which means we should laugh don't you think?", author: "Unknown" },
+      { text: "Nothing will work unless you do.", author: "Unknown" },
+      { text: "Action is the key to all success.", author: "Unknown" },
+      { text: "Never interrupt your enemy when they are making a mistake.", author: "Napoleon" },
+      { text: "I destroy my enemies by making them my friends.", author: "Abraham Lincoln" },
+      { text: "We choose to go to the moon in this decade and do the other things, not because they are easy, but because they are hard.", author: "John F. Kennedy" },
+      { text: "Do not pray for easy lives, pray to be stronger men.", author: "John F. Kennedy" },
+      { text: "In our society there are 2 groups of people who are causing all the problems. They are Karens and Incels.", author: "Unknown" },
+      { text: "Stare into the abyss for long enough and the abyss will stare back at you.", author: "Unknown" },
+      { text: "With great power comes great responsibility.", author: "Unknown" },
     ];
     const pick = quotes[Math.floor(Math.random() * quotes.length)];
     document.getElementById('quote-text').textContent = '"' + pick.text + '"';
