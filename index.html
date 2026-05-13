@@ -20,7 +20,7 @@
     --font-body: 'DM Mono', monospace;
     --radius:    12px;
     --logo:      220px;
-    --bar:       56px;
+    --bar:       80px;
   }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   body {
@@ -94,7 +94,7 @@
     background: #244c8f;
     color: #ffffff; cursor: pointer; transition: background .2s, color .2s;
     text-decoration: none; white-space: nowrap; border: none;
-    clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%); margin: 0 1px;
+    clip-path: polygon(30px 0%, 100% 0%, calc(100% - 30px) 100%, 0% 100%); margin: 0 1px;
     display: flex; align-items: center; justify-content: center;
   }
   .nav-btn:hover { background: #2d5cad; color: #fff; }
@@ -257,7 +257,7 @@
     svg.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
     svg.setAttribute('width', W);
     svg.setAttribute('height', H);
-    var pathFill = 'M0,0 L' + W + ',0 L' + W + ',' + bar + ' L' + rx + ',' + bar + ' L' + brx + ',' + depth + ' L' + blx + ',' + depth + ' L' + lx + ',' + bar + ' L0,' + bar + ' Z';
+    var topY = 40; var pathFill = 'M0,' + topY + ' L' + W + ',' + topY + ' L' + W + ',' + bar + ' L' + rx + ',' + bar + ' L' + brx + ',' + depth + ' L' + blx + ',' + depth + ' L' + lx + ',' + bar + ' L0,' + bar + ' Z';
     var pathStroke = 'M0,' + bar + ' L' + lx + ',' + bar + ' L' + blx + ',' + depth + ' L' + brx + ',' + depth + ' L' + rx + ',' + bar + ' L' + W + ',' + bar;
     svg.innerHTML = '<path d="' + pathFill + '" fill="' + fill + '" /><path d="' + pathStroke + '" fill="none" stroke="' + stroke + '" stroke-width="1.5"/>';
     document.getElementById('navGap').style.width = (half * 2 + 40) + 'px';
