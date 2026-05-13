@@ -49,8 +49,8 @@
     width: 100%; height: 100%; z-index: 2; overflow: visible;
   }
   .navbar-buttons {
-    position: absolute; top: 8px; left: 0; right: 0;
-    height: calc(var(--bar) - 8px); display: flex; align-items: center;
+    position: absolute; top: 2px; left: 0; right: 0;
+    height: calc(var(--bar) - 2px); display: flex; align-items: center;
     padding: 0; pointer-events: all; z-index: 4;
   }
   /* Dark strip above buttons so Safari sees dark not blue */
@@ -58,11 +58,14 @@
     content: "";
     position: absolute;
     top: 0; left: 0; right: 0;
-    height: 8px;
+    height: 2px;
     background: #0d0d0f;
     z-index: 5;
   }
   .nav-left  { display: flex; gap: 0; flex: 1; }
+  .nav-left .nav-btn {
+    clip-path: polygon(0% 0%, calc(100% - 30px) 0%, 100% 100%, 30px 100%);
+  }
   .nav-right { display: flex; gap: 0; flex: 1; justify-content: flex-end; }
   .nav-gap   { flex-shrink: 0; }
   .nav-logo {
@@ -219,7 +222,7 @@
       </div>
     </div>
 
-    <footer><p>Made with &#9829;ur mom&#9829; &middot; Hosted on GitHub &middot; Live Open Beta 1.6</p></footer>
+    <footer><p>Made with &#9829;ur mom&#9829; &middot; Hosted on GitHub &middot; Live Open Beta 1.7</p></footer>
   </div>
 </div>
 
@@ -232,7 +235,7 @@
         During my experience in employment I have gained skills in PC, phone and all technology. I have a passion for digital technologies, and I have a particular interest in Cyber Security. My career goal is to gain employment within the Australian Public Service to help serve the people of Australia against cyber-crimes. I have been working towards my goal with formal courses, as well as informal research and self-taught technology skills.
       </div>
     </div>
-    <footer><p>Made with &#9829;ur mom&#9829; &middot; Hosted on GitHub &middot; Live Open Beta 1.6</p></footer>
+    <footer><p>Made with &#9829;ur mom&#9829; &middot; Hosted on GitHub &middot; Live Open Beta 1.7</p></footer>
   </div>
 </div>
 
@@ -263,7 +266,7 @@
       <div style="margin-top:14px; display:inline-block; font-family:var(--font-head); font-size:10px; letter-spacing:.12em; text-transform:uppercase; padding:6px 14px; border:1px solid var(--border); border-radius:999px; color:var(--muted);">Coming Soon</div>
     </div>
 
-    <footer><p>Made with &#9829;ur mom&#9829; &middot; Hosted on GitHub &middot; Live Open Beta 1.6</p></footer>
+    <footer><p>Made with &#9829;ur mom&#9829; &middot; Hosted on GitHub &middot; Live Open Beta 1.7</p></footer>
   </div>
 </div>
 
@@ -278,7 +281,7 @@
       <div style="margin-top:14px; display:inline-block; font-family:var(--font-head); font-size:10px; letter-spacing:.12em; text-transform:uppercase; padding:6px 14px; border:1px solid var(--border); border-radius:999px; color:var(--muted);">Coming Soon</div>
     </div>
 
-    <footer><p>Made with &#9829;ur mom&#9829; &middot; Hosted on GitHub &middot; Live Open Beta 1.6</p></footer>
+    <footer><p>Made with &#9829;ur mom&#9829; &middot; Hosted on GitHub &middot; Live Open Beta 1.7</p></footer>
   </div>
 </div>
 
@@ -322,7 +325,7 @@
       </div>
     </div>
 
-    <footer><p>Made with &#9829;ur mom&#9829; &middot; Hosted on GitHub &middot; Live Open Beta 1.6</p></footer>
+    <footer><p>Made with &#9829;ur mom&#9829; &middot; Hosted on GitHub &middot; Live Open Beta 1.7</p></footer>
   </div>
 </div>
 
