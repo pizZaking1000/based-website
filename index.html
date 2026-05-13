@@ -51,8 +51,8 @@
     height: var(--bar); display: flex; align-items: center;
     padding: 0; pointer-events: all; z-index: 4;
   }
-  .nav-left  { display: flex; gap: 4px; flex: 1; }
-  .nav-right { display: flex; gap: 4px; flex: 1; justify-content: flex-end; }
+  .nav-left  { display: flex; gap: 0; flex: 1; }
+  .nav-right { display: flex; gap: 0; flex: 1; justify-content: flex-end; }
   .nav-gap   { flex-shrink: 0; }
   .nav-logo {
     position: absolute; top: 6px; left: 50%; transform: translateX(-50%);
@@ -77,13 +77,14 @@
   .nav-btn {
     font-family: var(--font-head); font-size: clamp(9px, 1.2vw, 12px);
     font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
-    padding: 0 clamp(12px, 2vw, 28px);
+    padding: 0;
     height: var(--bar);
+    flex: 1;
     background: #244c8f;
     color: #ffffff; cursor: pointer; transition: background .2s, color .2s;
     text-decoration: none; white-space: nowrap; border: none;
-    clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%); margin: 0 2px;
-    display: flex; align-items: center;
+    clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%); margin: 0 1px;
+    display: flex; align-items: center; justify-content: center;
   }
   .nav-btn:hover { background: #2d5cad; color: #fff; }
   .nav-btn.coming-soon { color: rgba(255,255,255,0.6); cursor: not-allowed; }
